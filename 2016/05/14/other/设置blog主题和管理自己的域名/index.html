@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="blog,hexo," />
+  <meta name="keywords" content="hexo,blog," />
 
 
 
@@ -94,7 +94,7 @@
 <meta property="og:description" content="之前已经通过HEXO和github搭建了个人博客，但是样式并不是很好看，以及域名逼格不够。
 1.设置博客的主题Hexo官方主题页内进行选择，被收录的主题还是很多的，当前博客使用的主题是Next，很简洁很干净。
 1.1下载最新的next主题包1.clone最新的next主题文件到桌面的next文件夹下面，	git clone https://github.com/iissnan/hexo-theme">
-<meta property="og:updated_time" content="2016-09-16T11:46:08.000Z">
+<meta property="og:updated_time" content="2016-09-16T14:43:43.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="HEXO博客主题设置和域名关联">
 <meta name="twitter:description" content="之前已经通过HEXO和github搭建了个人博客，但是样式并不是很好看，以及域名逼格不够。
@@ -325,8 +325,14 @@
 <h3 id="1-1下载最新的next主题包"><a href="#1-1下载最新的next主题包" class="headerlink" title="1.1下载最新的next主题包"></a>1.1下载最新的next主题包</h3><figure class="highlight awk"><table><tr><td class="code"><pre><div class="line"><span class="number">1</span>.clone最新的<span class="keyword">next</span>主题文件到桌面的<span class="keyword">next</span>文件夹下面，</div><div class="line">	git clone https:<span class="regexp">//gi</span>thub.com<span class="regexp">/iissnan/</span>hexo-theme-<span class="keyword">next</span> <span class="regexp">/Users/</span>weibing<span class="regexp">/Desktop/</span><span class="keyword">next</span></div><div class="line"><span class="number">2</span>.删除.git开头的无用文件，然后复制到本地blog的themes文件下面</div><div class="line"><span class="number">3</span>.修改blog目录下的_config.yml配置文件中的theme属性，将其设置为 <span class="keyword">next</span>。</div></pre></td></tr></table></figure>
 <h3 id="1-2重置部署查看效果"><a href="#1-2重置部署查看效果" class="headerlink" title="1.2重置部署查看效果"></a>1.2重置部署查看效果</h3><p>生成网址查看效果，更多参数设置可以自己查看<a href="http://theme-next.iissnan.com/" target="_blank" rel="external">Next</a>网站进行设置</p>
 <a id="more"></a>
-<h2 id="2-关联自己的域名"><a href="#2-关联自己的域名" class="headerlink" title="2.关联自己的域名"></a>2.关联自己的域名</h2><h3 id="2-1域名购买"><a href="#2-1域名购买" class="headerlink" title="2.1域名购买"></a>2.1域名购买</h3><p>自己是在万网上面买的，貌似狗爹会更加便宜吧，但是英语渣渣的我放弃了。价格还是可以接受的，一年大概几十块钱。</p>
-
+<h2 id="2-关联自己的域名"><a href="#2-关联自己的域名" class="headerlink" title="2.关联自己的域名"></a>2.关联自己的域名</h2><h3 id="2-1域名购买"><a href="#2-1域名购买" class="headerlink" title="2.1域名购买"></a>2.1域名购买</h3><p>自己是在<a href="https://whois.aliyun.com/" target="_blank" rel="external">万网</a>上面买的，貌似狗爹会更加便宜吧，但是英语渣渣的我放弃了。价格还是可以接受的，一年大概几十块钱。<br>注意阿里云的是需要实名认证，不然是没法重定向的。</p>
+<h3 id="2-2创建CNAME文件"><a href="#2-2创建CNAME文件" class="headerlink" title="2.2创建CNAME文件"></a>2.2创建CNAME文件</h3><p>在your_blog/source目录下新建一个名为CNAME的文件，内容为域名：xxxxx.com格式，可以不带www。然后部署到git page仓库，这样远程的仓库也就会有CNAME文件。如果你使用的是github，那么可以在项目的GitHub Pages底下Custom domain项中看到自己的域名信息。</p>
+<h3 id="2-3更改DNS"><a href="#2-3更改DNS" class="headerlink" title="2.3更改DNS"></a>2.3更改DNS</h3><p>买的阿里域名，在自己的域名管理页面修改DNS服务器，管理页面“DNS修改/创建”模块点击“修改域名DNS”选项，将DSN服务器改成 <strong>f1g1ns1.dnspod.net</strong> 和 <strong>f1g1ns2.dnspod.net</strong></p>
+<h3 id="2-4-DNSPOD注册账号-设置你的域名解析，添加别名。"><a href="#2-4-DNSPOD注册账号-设置你的域名解析，添加别名。" class="headerlink" title="2.4 DNSPOD注册账号,设置你的域名解析，添加别名。"></a>2.4 <a href="https://www.dnspod.cn/" target="_blank" rel="external">DNSPOD</a>注册账号,设置你的域名解析，添加别名。</h3><pre><code>1.注册DNSPOD账号，在“域名解析”模块，添加自己的域名。
+2.然后点击自己添加的域名，点击添加纪录，类型选择CNAME，路线选择默认，记录值填你在github里的那个点击就能进入你的网站的网址（your_name.guthub.io）,点击保存。一会应该就可以访问了。
+3.建议添加两条，主机记录一条是@，一条是www，这样不顾你输入的网址带不带www都会只想自己的博客。
+4.配置多条，设置国内外访问不同的域名，国内对应coding,国外访问github
+</code></pre>
       
     </div>
 
@@ -348,9 +354,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/blog/" rel="tag">#blog</a>
-          
             <a href="/tags/hexo/" rel="tag">#hexo</a>
+          
+            <a href="/tags/blog/" rel="tag">#blog</a>
           
         </div>
       
@@ -499,7 +505,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-设置博客的主题"><span class="nav-text">1.设置博客的主题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1下载最新的next主题包"><span class="nav-text">1.1下载最新的next主题包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2重置部署查看效果"><span class="nav-text">1.2重置部署查看效果</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-关联自己的域名"><span class="nav-text">2.关联自己的域名</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1域名购买"><span class="nav-text">2.1域名购买</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-设置博客的主题"><span class="nav-text">1.设置博客的主题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1下载最新的next主题包"><span class="nav-text">1.1下载最新的next主题包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2重置部署查看效果"><span class="nav-text">1.2重置部署查看效果</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-关联自己的域名"><span class="nav-text">2.关联自己的域名</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1域名购买"><span class="nav-text">2.1域名购买</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2创建CNAME文件"><span class="nav-text">2.2创建CNAME文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3更改DNS"><span class="nav-text">2.3更改DNS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-4-DNSPOD注册账号-设置你的域名解析，添加别名。"><span class="nav-text">2.4 DNSPOD注册账号,设置你的域名解析，添加别名。</span></a></li></ol></li></ol></div>
             
           </div>
         </section>
