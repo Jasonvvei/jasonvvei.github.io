@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="iOS, .NET" />
 
 
 
@@ -199,12 +199,12 @@
         </li>
       
         
-        <li class="menu-item menu-item-tags">
-          <a href="/tags" rel="section">
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
             
-            标签
+            分类
           </a>
         </li>
       
@@ -257,8 +257,8 @@
             
               
                 
-                <a class="post-title-link" href="/2015/10/10/hello-world/" itemprop="url">
-                  这个是  测试文章啊~~
+                <a class="post-title-link" href="/2015/10/10/other/hexo and github create bolg/" itemprop="url">
+                  HEXO搭建个人博客
                 </a>
               
             
@@ -276,6 +276,25 @@
             </time>
           </span>
 
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/其他/" itemprop="url" rel="index">
+                    <span itemprop="name">其他</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
           
 
           
@@ -300,11 +319,12 @@
 
       
         
-          <p>这是一个用来测试的文章啊~~~测试测试测试测试测试测试测试测试测试测试，哈哈哈俺收到了阿萨德爱上成长性阿萨德请问爱上才走的请问迪欧<br>Welcome to <a href="https://hexo.io/">Hexo</a>，Hexo是盛大的杀出现在爱上轻微的。</p>
-<h2 id="目录1"><a href="#目录1" class="headerlink" title="目录1"></a>目录1</h2><h3 id="第一点xxx"><a href="#第一点xxx" class="headerlink" title="第一点xxx"></a>第一点xxx</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>更多资料：</p>
+          <p>网上查找资料文档，通过HEXO搭建了个人的博客，第一篇文章就先记录一下搭建的过程吧。<br>    node 6.3.1<br>    hexo 3.2.2</p>
+<h2 id="1-配置基本环境"><a href="#1-配置基本环境" class="headerlink" title="1.配置基本环境"></a>1.配置基本环境</h2><h3 id="1-1-安装node-js"><a href="#1-1-安装node-js" class="headerlink" title="1.1 安装node.js"></a>1.1 安装node.js</h3><p>方式1:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;直接使用<a href="https://github.com/Homebrew/brew">Homebrew</a>最简单了,执行命令就安装和配置好了nodejs和npm，当然我是用这种方式安装的，当前node版本是6.3.1。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">brew install node</div></pre></td></tr></table></figure>
+<p>方式2: &nbsp;&nbsp; <a href="https://nodejs.org/en/">nodejs官网</a>下载安装，这种方式没有尝试，还不知道会不会有坑。</p>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2015/10/10/hello-world/#more" rel="contents">
+            <a class="btn" href="/2015/10/10/other/hexo and github create bolg/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -381,13 +401,20 @@
           </div>
 
           
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
 
           
             <div class="site-state-item site-state-tags">
-              <a href="/tags">
+              
                 <span class="site-state-item-count">1</span>
                 <span class="site-state-item-name">标签</span>
-              </a>
+              
             </div>
           
 
