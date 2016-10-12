@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="iOS, .NET" />
+  <meta name="keywords" content="iOS," />
 
 
 
@@ -84,15 +84,19 @@
 
 
 
-<meta name="description" content="It&apos;s interesting.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Jasonvvei's">
-<meta property="og:url" content="http://jasonvvei.com/categories/其他/index.html">
+<meta name="description" content="项目中之前加入了钱包的功能，关于金额的一些数据使用了CGFloat类型，果然所有语言关于金钱计算时候都会有坑，今天发现金额在计算时候显示不正常了，精度会导致数据不对，关于钱的东西坑就大了，只好乖乖的使用了OC自带的NSDecimalNumber类处理金额数据
+1.发现坑今天在在写某个页面的时候，需要显示总金额，理所当然的使用了float进行乘法，开始的时候还是正常的，突然发现了数字过大的时候就不对">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用NSDecimalNumber避免一些金额计算时候产生的坑">
+<meta property="og:url" content="http://jasonvvei.com/2016/10/12/iOS/使用NSDecimalNumber避免一些金额计算时候产生的坑/index.html">
 <meta property="og:site_name" content="Jasonvvei's">
-<meta property="og:description" content="It&apos;s interesting.">
+<meta property="og:description" content="项目中之前加入了钱包的功能，关于金额的一些数据使用了CGFloat类型，果然所有语言关于金钱计算时候都会有坑，今天发现金额在计算时候显示不正常了，精度会导致数据不对，关于钱的东西坑就大了，只好乖乖的使用了OC自带的NSDecimalNumber类处理金额数据
+1.发现坑今天在在写某个页面的时候，需要显示总金额，理所当然的使用了float进行乘法，开始的时候还是正常的，突然发现了数字过大的时候就不对">
+<meta property="og:updated_time" content="2016-10-12T13:32:36.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Jasonvvei's">
-<meta name="twitter:description" content="It&apos;s interesting.">
+<meta name="twitter:title" content="使用NSDecimalNumber避免一些金额计算时候产生的坑">
+<meta name="twitter:description" content="项目中之前加入了钱包的功能，关于金额的一些数据使用了CGFloat类型，果然所有语言关于金钱计算时候都会有坑，今天发现金额在计算时候显示不正常了，精度会导致数据不对，关于钱的东西坑就大了，只好乖乖的使用了OC自带的NSDecimalNumber类处理金额数据
+1.发现坑今天在在写某个页面的时候，需要显示总金额，理所当然的使用了float进行乘法，开始的时候还是正常的，突然发现了数字过大的时候就不对">
 
 
 
@@ -113,9 +117,9 @@
 
 
 
-  <link rel="canonical" href="http://jasonvvei.com/categories/其他/"/>
+  <link rel="canonical" href="http://jasonvvei.com/2016/10/12/iOS/使用NSDecimalNumber避免一些金额计算时候产生的坑/"/>
 
-  <title> 分类: 其他 | Jasonvvei's </title>
+  <title> 使用NSDecimalNumber避免一些金额计算时候产生的坑 | Jasonvvei's </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -145,7 +149,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left  ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -233,75 +237,165 @@
           <div id="content" class="content">
             
 
-  <section id="posts" class="posts-collapse">
-    <div class="collection-title">
-      <h2 >
-        其他
-        <small>分类</small>
-      </h2>
-    </div>
-
+  <div id="posts" class="posts-expand">
     
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2016/05/14/other/设置blog主题和管理自己的域名/" itemprop="url">
-              
-                <span itemprop="name">HEXO博客主题设置和域名关联</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-05-14T22:15:33+08:00"
-              content="2016-05-14" >
-          05-14
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-    
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2016/05/07/other/hexo and github create bolg/" itemprop="url">
-              
-                <span itemprop="name">HEXO搭建个人博客</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-05-07T20:10:33+08:00"
-              content="2016-05-07" >
-          05-07
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-    
-  </section>
 
   
+  
 
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                使用NSDecimalNumber避免一些金额计算时候产生的坑
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-10-12T21:23:10+08:00" content="2016-10-12">
+              2016-10-12
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/iOS/" itemprop="url" rel="index">
+                    <span itemprop="name">iOS</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/10/12/iOS/使用NSDecimalNumber避免一些金额计算时候产生的坑/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/10/12/iOS/使用NSDecimalNumber避免一些金额计算时候产生的坑/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/10/12/iOS/使用NSDecimalNumber避免一些金额计算时候产生的坑/" class="leancloud_visitors" data-flag-title="使用NSDecimalNumber避免一些金额计算时候产生的坑">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>项目中之前加入了钱包的功能，关于金额的一些数据使用了CGFloat类型，果然所有语言关于金钱计算时候都会有坑，今天发现金额在计算时候显示不正常了，精度会导致数据不对，关于钱的东西坑就大了，只好乖乖的使用了OC自带的NSDecimalNumber类处理金额数据</p>
+<h2 id="1-发现坑"><a href="#1-发现坑" class="headerlink" title="1.发现坑"></a>1.发现坑</h2><p>今天在在写某个页面的时候，需要显示总金额，理所当然的使用了float进行乘法，开始的时候还是正常的，突然发现了数字过大的时候就不对了(输入了99999999.99显示了100000000)，当时是一脸懵逼，关于钱的东西还是小心为妙，只好使用了系统提供的NSDecimalNumber类处理金额相关的数据。</p>
+<h2 id="2-解决问题"><a href="#2-解决问题" class="headerlink" title="2.解决问题"></a>2.解决问题</h2><h3 id="2-1域名购买"><a href="#2-1域名购买" class="headerlink" title="2.1域名购买"></a>2.1域名购买</h3><p>自己是在<a href="https://whois.aliyun.com/" target="_blank" rel="external">万网</a>上面买的，貌似狗爹会更加便宜吧，但是英语渣渣的我放弃了。价格还是可以接受的，一年大概几十块钱。<br>注意阿里云的是需要实名认证，不然是没法重定向的。</p>
+<h3 id="2-2创建CNAME文件"><a href="#2-2创建CNAME文件" class="headerlink" title="2.2创建CNAME文件"></a>2.2创建CNAME文件</h3><p>在your_blog/source目录下新建一个名为CNAME的文件，内容为域名：xxxxx.com格式，可以不带www。然后部署到git page仓库，这样远程的仓库也就会有CNAME文件。如果你使用的是github，那么可以在项目的GitHub Pages底下Custom domain项中看到自己的域名信息。</p>
+<h3 id="2-3更改DNS"><a href="#2-3更改DNS" class="headerlink" title="2.3更改DNS"></a>2.3更改DNS</h3><p>买的阿里域名，在自己的域名管理页面修改DNS服务器，管理页面“DNS修改/创建”模块点击“修改域名DNS”选项，将DSN服务器改成 <strong>f1g1ns1.dnspod.net</strong> 和 <strong>f1g1ns2.dnspod.net</strong></p>
+<h3 id="2-4-DNSPOD注册账号-设置你的域名解析，添加别名。"><a href="#2-4-DNSPOD注册账号-设置你的域名解析，添加别名。" class="headerlink" title="2.4 DNSPOD注册账号,设置你的域名解析，添加别名。"></a>2.4 <a href="https://www.dnspod.cn/" target="_blank" rel="external">DNSPOD</a>注册账号,设置你的域名解析，添加别名。</h3><pre><code>1.注册DNSPOD账号，在“域名解析”模块，添加自己的域名。
+2.然后点击自己添加的域名，点击添加纪录，类型选择CNAME，路线选择默认，记录值填你在github里的那个点击就能进入你的网站的网址（your_name.guthub.io）,点击保存。一会应该就可以访问了。
+3.建议添加两条，主机记录一条是@，一条是www，这样不顾你输入的网址带不带www都会只想自己的博客。
+4.配置多条，设置国内外访问不同的域名，国内对应coding,国外访问github
+</code></pre>
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/iOS/" rel="tag">#iOS</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/05/14/other/设置blog主题和管理自己的域名/" rel="next" title="HEXO博客主题设置和域名关联">
+                <i class="fa fa-chevron-left"></i> HEXO博客主题设置和域名关联
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -309,6 +403,14 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/10/12/iOS/使用NSDecimalNumber避免一些金额计算时候产生的坑/"
+           data-title="使用NSDecimalNumber避免一些金额计算时候产生的坑" data-url="http://jasonvvei.com/2016/10/12/iOS/使用NSDecimalNumber避免一些金额计算时候产生的坑/">
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -328,8 +430,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.png"
@@ -399,6 +510,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-发现坑"><span class="nav-text">1.发现坑</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-解决问题"><span class="nav-text">2.解决问题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1域名购买"><span class="nav-text">2.1域名购买</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2创建CNAME文件"><span class="nav-text">2.2创建CNAME文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3更改DNS"><span class="nav-text">2.3更改DNS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-4-DNSPOD注册账号-设置你的域名解析，添加别名。"><span class="nav-text">2.4 DNSPOD注册账号,设置你的域名解析，添加别名。</span></a></li></ol></li></ol></div>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -502,6 +624,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 
